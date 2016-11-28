@@ -6,6 +6,6 @@ services:
 - name: "auth"
   ip: ["localhost:8989"]
 
-- name: "auth"
+- name: "core"
   ip: ["localhost:8989"]
 

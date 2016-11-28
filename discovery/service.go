@@ -4,7 +4,6 @@ import (
 	"github.com/parnurzeal/gorequest"
 	"fmt"
 	"encoding/json"
-	"github.com/andrepinto/holmes/version"
 )
 
 
@@ -13,9 +12,6 @@ type ServiceData struct {
 	Dependencies []Dependency  `json:"dependencies,omitempty"`
 }
 
-func(service *ServiceData) VersionValidator(v string)  {
-	version.CheckVersion("","")
-}
 
 func GetServiceInfo(endpoint string)(*ServiceData, []error){
 	request := gorequest.New()
