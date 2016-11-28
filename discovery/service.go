@@ -10,7 +10,7 @@ import (
 
 type ServiceData struct {
 	Service *Service `json:"service,omitempty"`
-	Dependencies *[]Dependency  `json:"dependencies,omitempty"`
+	Dependencies []Dependency  `json:"dependencies,omitempty"`
 }
 
 func(service *ServiceData) VersionValidator(v string)  {

@@ -8,6 +8,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"github.com/andrepinto/holmes/discovery"
+	"github.com/andrepinto/holmes/diagnostic"
 )
 
 type Api struct {
@@ -42,10 +43,18 @@ func(api *Api) envHandler(w http.ResponseWriter, r *http.Request) {
 	json.NewEncoder(w).Encode(env)
 }
 
+func(api *Api) diagnosticHandler(w http.ResponseWriter, r *http.Request) {
+	env, _ := discovery.LoadEnvironment()
+	dg, _ := diagnostic.NewDiagnostic(env)
+	dg.Run()
+	json.NewEncoder(w).Encode(dg)
+}
+
 func(api *Api) Run() {
 
 	api.router.HandleFunc("/status", api.statusHandler)
 	api.router.HandleFunc("/env", api.envHandler)
+	api.router.HandleFunc("/diagnostic", api.diagnosticHandler)
 
 	log.Fatal(http.ListenAndServe(fmt.Sprintf(":%d",api.Port), api.router))
 }

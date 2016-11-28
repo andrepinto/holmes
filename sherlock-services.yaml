@@ -1,15 +1,11 @@
 services:
 
+- name: "my-service"
+  ip: ["localhost:8989"]
 
+- name: "auth"
+  ip: ["localhost:8989"]
 
-
-- name: "customers"
-  ip: ["172.17.0.5:4000"]
-
-
-
-
-
-- name: "sales"
-  ip: ["172.17.0.3:3000"]
+- name: "auth"
+  ip: ["localhost:8989"]
 
