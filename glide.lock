@@ -1,0 +1,20 @@
+hash: 0d99b8c7c4b6e0b7d6fbde8e8bcfdb3defd8101030e52223c3e7bbce294f726d
+updated: 2016-11-27T22:37:11.787497839Z
+imports:
+- name: github.com/blang/semver
+  version: 60ec3488bfea7cca02b021d106d9911120d25fe9
+- name: github.com/gorilla/context
+  version: 08b5f424b9271eedf6f9f0ce86cb9396ed337a42
+- name: github.com/gorilla/mux
+  version: 0eeaf8392f5b04950925b8a69fe70f110fa7cbfc
+- name: github.com/moul/http2curl
+  version: 4e24498b31dba4683efb9d35c1c8a91e2eda28c8
+- name: github.com/parnurzeal/gorequest
+  version: 2aea80ce763523ecc6452e61c3727ae9595a5809
+- name: golang.org/x/net
+  version: 4971afdc2f162e82d185353533d3cf16188a9f4e
+  subpackages:
+  - publicsuffix
+- name: gopkg.in/yaml.v2
+  version: a5b47d31c556af34a302ce5d659e6fea44d90de0
+devImports: []

@@ -1,0 +1,7 @@
+services:
+{{range $index, $service := services}}
+{{ if in $service.Tags "sherlock" }}
+- name: "{{$service.Name}}"
+  ip: ["{{range $i, $st := service $service.Name}}{{ $st.Address}}:{{ $st.Port}}{{if ne $i 0}},{{end}}{{end}}"]
+{{ end }}
+{{end}}

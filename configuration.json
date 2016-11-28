@@ -1,0 +1,10 @@
+{
+  "service":{
+    "name":"holmes",
+    "version":"v0.1.0",
+    "consul": "{{ if .CONSUL_AGENT }}localhost{{ else }}{{ .CONSUL }}{{ end }}:8500"
+  },
+  "api":{
+    "port":9999
+  }
+}

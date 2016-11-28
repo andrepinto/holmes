@@ -1,0 +1,15 @@
+services:
+
+
+
+
+- name: "customers"
+  ip: ["172.17.0.5:4000"]
+
+
+
+
+
+- name: "sales"
+  ip: ["172.17.0.3:3000"]
+
